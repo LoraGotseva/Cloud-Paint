@@ -1,2 +1,2 @@
 # Web Technology Project
-Made vy David Petrov, Lora Gotseva, Alex Slavov and Atanas Keranov
+Made by David Petrov, Lora Gotseva, Alex Slavov and Atanas Keranov
