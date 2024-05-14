@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
 
 const startDraw = () => {
     isDrawing = true;
-    ctx.beginPath(); //create a new path to draw
+    ctx.beginPath(); // allows us to start a new line without connecting it to the previous one
     ctx.lineWidth = brushWidth;
     ctx.strokeStyle = selectedColor;
     ctx.fillStyle = selectedColor;
@@ -26,7 +26,7 @@ const drawing = (e) => {
         return;
     }
     ctx.lineTo(e.offsetX, e.offsetY); //creating line according to the x and y coordinates of the cursor
-    ctx.stroke(); //filling line with color
+    ctx.stroke(); //filling the line with color
 }
 
 colors.forEach(btn => {
