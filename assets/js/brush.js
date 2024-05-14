@@ -6,10 +6,11 @@ ctx = canvas.getContext("2d");
 let isDrawing = false;
 let brushWidth = 5;
 let selectedColor = "#000";
+
 window.addEventListener("load", () => {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
-
+    setCanvasBackground();
 })
 
 const startDraw = () => {
