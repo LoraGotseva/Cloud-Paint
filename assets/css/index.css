@@ -76,47 +76,51 @@ li {
     cursor: pointer;
 }
 
-.color-option1 {
+.color.option1 {
     color: rgb(242, 80, 80);
 }
 
-.color-option2 {
+.color.option2 {
     color: rgb(255, 184, 42);
 }
-.color-option3 {
+.color.option3 {
     color: rgb(255, 248, 55);
 }
 
-.color-option4 {
+.color.option4 {
     color: rgb(99, 222, 41);
 }
 
-.color-option5 {
+.color.option5 {
     color: rgb(41, 101, 222);
 }
 
-.color-option6 {
+.color.option6 {
     color: rgb(144, 41, 222);
 }
 
-.color-option7 {
+.color.option7 {
     color: rgb(0, 0, 0);
 }
 
-.color-option8 {
+.color.option8 {
     color: rgb(70, 70, 70);
 }
 
-.color-option9 {
+.color.option9 {
     color: rgb(107, 107, 107);
 }
 
-.color-option10 {
+.color.option10 {
     color: rgb(149, 149, 149);
 }
 
-.color-option11 {
+.color.option11 {
     color: rgb(212, 212, 212);
+}
+
+.color.option12 {
+    color: rgb(255, 255, 255);
 }
 
 input[type="range"] {
