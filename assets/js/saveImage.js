@@ -1,5 +1,4 @@
 const canvas = document.querySelector("canvas");
-const clearCanvas = document.querySelector(".clear-button");
 const saveImg = document.querySelector(".download-button");
 const ctx = canvas.getContext("2d");
 let selectedColor = "#000";
