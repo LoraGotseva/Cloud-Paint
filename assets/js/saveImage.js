@@ -16,11 +16,6 @@ window.addEventListener("load", () => {
     setCanvasBackground();
 });
 
-clearCanvas.addEventListener("click", () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    setCanvasBackground();
-});
-
 const saveCanvas = () => {
     Swal.fire({
         title: "Save Image",
