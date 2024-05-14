@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Paint</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Not sure if I need this line-->
+    <link rel="icon" type="image/x-icon" href="./assets/images/palette-removebg-preview.png">
+    <script src="https://kit.fontawesome.com/4a8352fdb0.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="main-container">
+        <section class="drawing-board">
+            <canvas></canvas>
+            <button class="clear-button"><i class="fa-regular fa-trash-can"></i></button>
+        </section>
+        <section class="tools-board">
+            <div class="toolbar-container">
+                <div class="tools-wrapper">
+                    <p class="title">Colors</p>
+                    <ul class="options">
+                        <li class="color-option1"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color-option2"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color-option3"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color-option4"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color-option5"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color-option6"><i class="fa-solid fa-circle"></i></li>
+                    </ul>
+                    <ul class="options">
+                        <li class="color-option7"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color-option8"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color-option9"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color-option10"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color-option11"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color-option12"><i class="fa-regular fa-circle"></i></li>
+                    </ul>
+                    <p class="title">Tools</p>
+                    <ul class="options">
+                        <li class="tool"><i class="fa-solid fa-paintbrush"></i></li>
+                        <li class="tool"><i class="fa-solid fa-eraser"></i></li>
+                        <li class="tool"><i class="fa-solid fa-fill"></i></li>
+                        <li class="tool"><i class="fa-solid fa-font"></i></li>
+                        <li class="size-slider-tool"><input type="range" id="size-slider" min="1" max="30" value="5"></li>
+                    </ul>
+                    <p class="title">Figures</p>
+                    <ul class="options">
+                        <li class="tool"><i class="fa-regular fa-square"></i></li>
+                        <li class="tool"><i class="fa-regular fa-circle"></i></li>
+                        <li class="tool"><i class="fa-regular fa-star"></i></li>
+                        <li class="tool">\</li>
+                        <li class="fill-color-checkbox"><input type="checkbox" id="fill-color">  Fill color</li>
+                    </ul>
+                </div>
+                <div class="image-wrapper">
+                    <img src="./assets/images/palette-removebg-preview.png">
+                </div>
+                <div class="buttons-wrapper">
+                    <button class="upload-button"><i class="fa-solid fa-arrow-up"></i>  Upload</button>
+                    <button class="download-button"><i class="fa-solid fa-arrow-down"></i>  Download</button>
+                </div>
+            </div>
+        </section>
+    </div>
+  </body>
+</html>

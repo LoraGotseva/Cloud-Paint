@@ -1,0 +1,264 @@
+@import url("./css-reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    height: 100vh;
+    background-color: #453F78;
+    color: #453F78;
+}
+
+.main-container {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.drawing-board {
+    position: relative;
+    display: flex;
+    width: 900px;
+    height: 600px;
+}
+
+.drawing-board canvas {
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.clear-button {
+    position: absolute;
+    top: 5px; 
+    left: 10px; 
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    font-size: 30px;
+    color:#453F78;
+    
+}
+
+.clear-button:hover {
+    transform: rotate(-15deg);
+    transition: 0.3s;
+    background-color: white;
+    color:red;
+}
+
+
+.toolbar-container {
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    width: 300px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.title {
+    margin: 30px 0 20px 20px;
+    font-size: 18px;
+}
+
+.options {
+    justify-content: space-evenly;
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+li {
+    cursor: pointer;
+}
+
+.color-option1 {
+    color: rgb(242, 80, 80);
+}
+
+.color-option2 {
+    color: rgb(255, 184, 42);
+}
+.color-option3 {
+    color: rgb(255, 248, 55);
+}
+
+.color-option4 {
+    color: rgb(99, 222, 41);
+}
+
+.color-option5 {
+    color: rgb(41, 101, 222);
+}
+
+.color-option6 {
+    color: rgb(144, 41, 222);
+}
+
+.color-option7 {
+    color: rgb(0, 0, 0);
+}
+
+.color-option8 {
+    color: rgb(70, 70, 70);
+}
+
+.color-option9 {
+    color: rgb(107, 107, 107);
+}
+
+.color-option10 {
+    color: rgb(149, 149, 149);
+}
+
+.color-option11 {
+    color: rgb(212, 212, 212);
+}
+
+input[type="range"] {
+    width: 90px;
+}
+
+.fill-color-checkbox {
+    font-size: 18px;
+}
+
+li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+img {
+    display: flex;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.buttons-wrapper {
+    display: flex;
+}
+
+button {
+    width: 100%;
+    height: 70px;
+    border: none;
+    cursor: pointer;
+    background-color: #7D83FF;
+    color: white;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button:hover {
+    background-color: #27234a;
+    transition: 0.3s;
+}
+
+.upload-button {
+    border-bottom-left-radius: 10px;
+}
+
+.download-button {
+    border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 424px) {
+
+    .main-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .drawing-board {
+        width: 300px;
+        height: 250px;
+        margin-top: 15px;
+    }
+
+    button {
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .clear-button {
+        font-size: 20px;
+    }
+
+    .tools-board{
+        margin-bottom: 15px;
+    }
+
+    .toolbar-container {
+        height: 275px;
+    }
+
+    .title {
+        margin: 10px 0 10px 20px;
+        font-size: 15px;
+    }
+
+    .options {
+        font-size: 20px;
+    }
+    
+    .image-wrapper {
+        display: none;
+    }   
+
+ }
+
+ @media screen and (min-width: 425px) and (max-width: 1023px) {
+    .main-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .drawing-board {
+        width: 80%;
+        height: 350px;
+        margin-top: 15px;
+    }
+
+    button {
+        height: 60px;
+    }
+
+    .tools-board{
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .toolbar-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    .title {
+        margin: 10px 0 10px 20px;
+    }
+
+    .options {
+        margin-bottom: 20px;
+    }
+
+    .image-wrapper {
+        display: none;
+    }
+
+ }
+
+ @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .main-container {
+        gap: 10px;
+    }
+
+    .drawing-board {
+        width: 700px;
+    }
+ }
+
+   
