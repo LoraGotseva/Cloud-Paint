@@ -1,4 +1,4 @@
-const clearBtn = document.getElementsByClassName('clear-button')[0];
+const clearBtn = document.querySelector('.clear-button');
 
 const erase = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
