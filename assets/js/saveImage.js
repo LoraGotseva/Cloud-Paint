@@ -30,8 +30,3 @@ const saveCanvas = () => {
 };
 
 document.querySelector(".download-button").addEventListener("click", saveCanvas);
-
-canvas.addEventListener("click", () => {
-    const downloadLinks = document.querySelectorAll(".download-link");
-    downloadLinks.forEach(link => link.remove());
-});
