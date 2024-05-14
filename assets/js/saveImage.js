@@ -1,9 +1,3 @@
-const setCanvasBackground = () => {
-    ctx.fillStyle = "#fff";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = selectedColor;
-};
-
 const saveCanvas = () => {
     Swal.fire({
         title: "Save Image",
