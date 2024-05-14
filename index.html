@@ -9,6 +9,10 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/palette-removebg-preview.png">
     <script src="https://kit.fontawesome.com/4a8352fdb0.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="./assets/js/brush.js" defer></script>
+    <script src="./assets/js/saveImage.js" defer></script>
+    <script src="./assets/js/sizeSlider.js" defer></script>
+    <script src="./assets/js/clearBtn.js" defer></script>
 
   </head>
   <body>
@@ -22,20 +26,20 @@
                 <div class="tools-wrapper">
                     <p class="title">Colors</p>
                     <ul class="options">
-                        <li class="color-option1"><i class="fa-solid fa-circle"></i></li>
-                        <li class="color-option2"><i class="fa-solid fa-circle"></i></li>
-                        <li class="color-option3"><i class="fa-solid fa-circle"></i></li>
-                        <li class="color-option4"><i class="fa-solid fa-circle"></i></li>
-                        <li class="color-option5"><i class="fa-solid fa-circle"></i></li>
-                        <li class="color-option6"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color option1"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color option2"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color option3"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color option4"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color option5"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color option6"><i class="fa-solid fa-circle"></i></li>
                     </ul>
                     <ul class="options">
-                        <li class="color-option7"><i class="fa-solid fa-circle"></i></li>
-                        <li class="color-option8"><i class="fa-solid fa-circle"></i></li>
-                        <li class="color-option9"><i class="fa-solid fa-circle"></i></li>
-                        <li class="color-option10"><i class="fa-solid fa-circle"></i></li>
-                        <li class="color-option11"><i class="fa-solid fa-circle"></i></li>
-                        <li class="color-option12"><i class="fa-regular fa-circle"></i></li>
+                        <li class="color option7"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color option8"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color option9"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color option10"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color option11"><i class="fa-solid fa-circle"></i></li>
+                        <li class="color option12"><i class="fa-regular fa-circle"></i></li>
                     </ul>
                     <p class="title">Tools</p>
                     <ul class="options">
@@ -43,7 +47,7 @@
                         <li class="tool"><i class="fa-solid fa-eraser"></i></li>
                         <li class="tool"><i class="fa-solid fa-fill"></i></li>
                         <li class="tool"><i class="fa-solid fa-font"></i></li>
-                        <li class="size-slider-tool"><input type="range" id="size-slider" min="1" max="30" value="5"></li>
+                        <li><input type="range" id="size-slider" min="1" max="30" value="5"></li>
                     </ul>
                     <p class="title">Figures</p>
                     <ul class="options">
@@ -64,6 +68,5 @@
             </div>
         </section>
     </div>
-      <script src="/cloud-paint-main/assets/scripts/saveImage.js" defer></script>
   </body>
 </html>
