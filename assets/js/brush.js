@@ -1,7 +1,7 @@
 const canvas = document.querySelector("canvas");
 const colors = document.querySelectorAll(".color");
 
-ctx = canvas.getContext("2d");
+const ctx = canvas.getContext("2d"); //allows us to draw on the canvas
 
 let isDrawing = false;
 let brushWidth = 5;
