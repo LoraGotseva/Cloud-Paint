@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/Cloud-Paint-main/assets/css/signUp.css">
+</head>
+<body class="flex-box">
+    <div class="wrapper flex-box">
+        <form class="sign-up-box flex-box" id="sign-up-form">
+            <div id="sign-up-header" class="flex-box">
+                <h1>Welcome to ChatWorld!</h1>
+            </div>
+            <div id="user-input" class="flex-box">
+                <ul class="flex-box">
+                    <li class="input">
+                        <h2>Username:*</h2>
+                        <input type="text" class="sign-up-input" name="username" placeholder="Username..." id="sign-up-username">
+                        <div id="username_error" class="input_errors error"></div>
+                    </li>
+                    <li class="input">
+                        <h2>Password:*</h2>
+                        <input type="password" class="sign-up-input" name="password" placeholder="Password..." id="sign-up-password">
+                        <div id="password_error" class="input_errors error"></div>
+                    </li>
+                    <li class="input">
+                        <h2>Repeat password:*</h2>
+                        <input type="password" class="sign-up-input" name="repPassoword" placeholder="Repeat password..." id="sign-up-repeat-password">
+                        <div id="repPassoword_error" class="input_errors error"></div>
+                    </li>
+                    <li class="input">
+                        <h2>Email:*</h2>
+                        <input type="email" class="sign-up-input" name="email" placeholder="chatworld@gmail.com..." id="sign-up-email">
+                        <div id="email_error" class="input_errors error"></div>
+                    </li>
+                    <li class="input">
+                        <h2>Date of birth:*</h2>
+                        <input type="date" class="sign-up-input" name="birth" id="date-of-birth">
+                        <div id="birth_error" class="input_errors error"></div>
+                    </li>
+                </ul>
+            </div>
+            <div id="sign-up-button" class="flex-box">
+                <ul class="terms-conditions flex-box">
+                    <li><input type="checkbox" class="checkbox">
+                        <p>I accept the <button type="button" id="terms-btn">Terms of Use</button></p>
+                    </li>
+                    <div id="terms-container">
+                        <div id="modal">
+                            <h1>Terms of Use</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Dapibus ultrices in iaculis nunc sed augue.
+                            Amet purus gravida quis blandit turpis cursus in. Elementum facilisis leo vel fringilla est ullamcorper eget nulla facilisi.
+                            In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Fusce ut placerat orci nulla pellentesque dignissim.
+                            Elit ut aliquam purus sit amet luctus. Amet massa vitae tortor condimentum lacinia quis. Velit egestas dui id ornare arcu odio ut sem nulla.
+                            Tortor at auctor urna nunc id cursus. Aenean et tortor at risus. Duis tristique sollicitudin nibh sit amet commodo.
+                            Sagittis id consectetur purus ut faucibus. Amet aliquam id diam maecenas ultricies mi eget.
+                            Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
+                            <button id="close-terms-btn" class="buttons">Confirm</button>
+                        </div>
+                    </div>
+                    <li><input type="checkbox" class="checkbox">
+                        <p>I have read the <button type="button" id="privacy-btn">Privacy Policy</button></p>
+                    </li>
+                    <div id="privacy-container">
+                        <div id="modal">
+                            <h1>Privacy Policy</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <button id="close-privacy-btn" class="buttons">Confirm</button>
+                        </div>
+                    </div>
+                </ul>
+                <div class="buttons flex-box">
+                    <button class="submit-sign-up" type="submit" id="btn-sign-up" name="submitData" disabled>Sign Up</button>
+                    <a id="back-to-main" href="/Cloud-Paint-main/assets/html/logIn.html">
+                        <button class="submit-sign-up" type="button">I already have an account.</button>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/Cloud-Paint-main/assets/js/sign-up.js"></script>
+    <script src="/Cloud-Paint-main/assets/js/singUpValidation.js" type="module"></script>
+</body>
+</html>
