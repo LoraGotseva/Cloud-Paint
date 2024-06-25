@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .flex-box {
+    display: flex;
+  }
+  
+  body {
+    font-family: sans-serif;
+    justify-content: center;
+    background-color: #453F78;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .wrapper {
+    height: 720px;
+    width: 480px;
+  
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-box {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    box-shadow: 0 0 10px black;
+    height: 480px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #login-header {
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5%;
+  }
+  
+  h1 {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 35px;
+  }
+  
+  #user-input {
+    flex-direction: column;
+    height: 60%;
+    margin: 0 5%;
+  }
+  
+  #user-input ul {
+    flex-direction: column;
+    width: 100%;
+    height: 95%;
+    list-style: none;
+    justify-content: space-evenly;
+  }
+  
+  #user-input ul li {
+    flex-direction: column;
+    margin: -25px 0;
+  }
+  
+  #login-email,
+  #login-password {
+    text-decoration: none;
+    border: none;
+    width: 100%;
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: gainsboro;
+    transition: 0.5s;
+  }
+  
+  #login-email:focus,
+  #login-password:focus {
+    outline: none;
+    background-color: #ffd048;
+  }
+  
+  h2 {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 25px;
+    margin-bottom: 2px;
+  }
+  
+  h3 {
+    justify-self: center;
+    align-self: center;
+    border-radius: 5px;
+    padding: 3px;
+    margin-bottom: 5px;
+  }
+  
+  .sign-up {
+    background-color: white;
+    justify-self: center;
+    align-self: center;
+    border-radius: 5px;
+    padding: 3px;
+    margin-bottom: 5px;
+  }
+  
+  #login-button {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20%;
+  }
+  
+  .login-box div:not(:last-child) {
+    border-bottom: 1px solid black;
+  }
+  
+  #submit-login {
+    width: 240px;
+    height: 30px;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #ffffff;
+    transition: 0.5s;
+  }
+  
+  #submit-login:hover {
+    background-color: aquamarine;
+    width: 300px;
+    height: 35px;
+    border: 1px solid black;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    font-size: larger;
+    background-color: aquamarine;
+    border-radius: 15px;
+    padding: 6px;
+  }
+  
+  .email_error {
+    margin-top: 4px;
+    font-size: 14px;
+    color: darkred;
+  }
+  .password_error {
+    margin-top: 4px;
+    font-size: 14px;
+    color: darkred;
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+  
+  .wrapper-icons .button{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+    margin-bottom: -30px;
+  }
+  
+  .button:nth-child(1){
+    margin-left: 30%;
+    margin-right: 30px;
+  }
+  
+  .wrapper-icons .button:hover{
+    width: 200px;
+  }
+  .wrapper-icons .button .icon{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 40px;
+    box-sizing: border-box;
+    line-height: 50px;
+    transition: all 0.3s ease-out;
+  }
+  
+  .wrapper-icons .button:nth-child(1):hover .icon{
+    background: #4267B2;
+  }
+  .wrapper-icons .button:nth-child(2):hover .icon{
+    background: #f21d1d;
+  }
+  .wrapper-icons .button .icon i{
+    font-size: 25px;
+    line-height: 50px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper-icons .button:hover .icon i{
+    color: #fff;
+  }
+  .wrapper-icons .button span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 50px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper-icons .button:nth-child(1):hover span{
+    color: #4267B2;
+  }
+  .wrapper-icons .button:nth-child(2):hover span{
+    color: #f21d1d;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .login-box {
+      height: 480px;
+      width: 90%;
+    }
+  
+    #login-button {
+      margin: 0 10%;
+      text-align: center;
+    }
+  
+    a:hover {
+      color: #247796;
+      background-color: transparent;
+      border-radius: 15px;
+      padding: 6px;
+      font-size: 20px;
+    }
+  
+    #forgotten-password:hover {
+      background-color: white;
+      color: #247796;
+    }
+  }
