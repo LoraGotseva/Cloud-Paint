@@ -34,7 +34,7 @@ const startDraw = (e) => {
 }
 
 const drawing = (e) => {
-    if(!isDrawing) {
+    if (!isDrawing) {
         return;
     } 
     ctx.putImageData(snapshot, 0, 0);
@@ -49,7 +49,7 @@ const drawing = (e) => {
 
 colors.forEach(btn => {
     btn.addEventListener("click", () => {
-       selectedColor = window.getComputedStyle(btn).getPropertyValue("color"); //sets the color that we are going to use
+        selectedColor = window.getComputedStyle(btn).getPropertyValue("color"); //sets the color that we are going to use
     })
 })
 
