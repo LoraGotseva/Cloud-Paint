@@ -9,7 +9,7 @@ const saveCanvas = () => {
                 <option value="bmp">BMP</option>
             </select>
         `,
-        showCancelButton: true,
+       // showCancelButton: true,
         confirmButtonText: "Save",
         cancelButtonText: "Cancel",
         preConfirm: () => {

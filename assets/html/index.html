@@ -12,6 +12,8 @@
     <script src="../js/brush.js" defer></script>
     <script src="../js/sizeSlider.js" defer></script>
     <script src="../js/clearBtn.js" defer></script>
+    <script src="../js/eraser.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   </head>
   <body>
@@ -42,18 +44,18 @@
                     </ul>
                     <p class="title">Tools</p>
                     <ul class="options">
-                        <li class="tool"><i class="fa-solid fa-paintbrush"></i></li>
-                        <li class="tool"><i class="fa-solid fa-eraser"></i></li>
-                        <li class="tool"><i class="fa-solid fa-fill"></i></li>
-                        <li class="tool"><i class="fa-solid fa-font"></i></li>
+                        <li class="tool" id="brush"><i class="fa-solid fa-paintbrush"></i></li>
+                        <li class="tool" id="eraser"><i class="fa-solid fa-eraser"></i></li>
+                        <li class="tool" id="bucket"><i class="fa-solid fa-fill"></i></li>
+                        <li class="tool" id="text"><i class="fa-solid fa-font"></i></li>
                         <li><input type="range" id="size-slider" min="1" max="30" value="5"></li>
                     </ul>
                     <p class="title">Figures</p>
                     <ul class="options">
-                        <li class="tool"><i class="fa-regular fa-square"></i></li> <!--class figures + triugulnik + indikator koi tool sme izbrali-->
-                        <li class="tool"><i class="fa-regular fa-circle"></i></li>
-                        <li class="tool"><i class="fa-regular fa-star"></i></li>
-                        <li class="tool">\</li>
+                        <li class="tool" id="rectangle"><i class="fa-regular fa-square"></i></li> <!--class figures + triugulnik + indikator koi tool sme izbrali-->
+                        <li class="tool" id="circle"><i class="fa-regular fa-circle"></i></li>
+                        <li class="tool" id="star"><i class="fa-regular fa-star"></i></li>
+                        <li class="tool" id="line">\</li>
                         <li class="fill-color-checkbox"><input type="checkbox" id="fill-color">  Fill shape</li>
                     </ul>
                 </div>
