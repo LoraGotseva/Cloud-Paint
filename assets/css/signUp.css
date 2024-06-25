@@ -25,7 +25,7 @@
   }
   
   .sign-up-box {
-    background-image: url("/assets/images/background.jpg");
+    background-image: url("../images/background.jpg");
     background-size: cover;
     box-shadow: 0 0 10px black;
     height: 700px;
