@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="icon" type="image/x-icon" href="../images/palette-removebg-preview.png">
-    <link rel="stylesheet" href="../css/signUp.css">
+    <link rel="icon" type="image/x-icon" href="/assets/images/palette-removebg-preview.png">
+    <link rel="stylesheet" href="/assets/css/signUp.css">
 </head>
 <body class="flex-box">
     <div class="wrapper flex-box">
-        <form class="sign-up-box flex-box" id="sign-up-form">
+        <form class="sign-up-box flex-box" id="sign-up-form" method="post" action="/register">
             <div id="sign-up-header" class="flex-box">
-                <h1>Welcome to Cloud Paint!</h1>
+                <h1>Welcome to ChatWorld!</h1>
             </div>
             <div id="user-input" class="flex-box">
                 <ul class="flex-box">
@@ -78,7 +78,7 @@
                 </ul>
                 <div class="buttons flex-box">
                     <button class="submit-sign-up" type="submit" id="btn-sign-up" name="submitData" disabled>Sign Up</button>
-                    <a id="back-to-main" href="../html/logIn.html">
+                    <a id="back-to-main" href="/assets/html/logIn.html">
                         <button class="submit-sign-up" type="button">I already have an account.</button>
                     </a>
                 </div>
@@ -86,7 +86,7 @@
         </form>
     </div>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/sign-up.js"></script>
-    <script src="../js/singUpValidation.js" type="module"></script>
+    <script src="/assets/js/sign-up.js"></script>
+    <script src="/assets/js/singUpValidation.js" type="module"></script>
 </body>
 </html>

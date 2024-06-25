@@ -7,7 +7,7 @@ function validateUsername(value){
         return false;
     }
     if(value.length < 3 ){
-        document.querySelector('#username_error').innerHTML = "Username must be atleast 3 characters";
+        document.querySelector('#username_error').innerHTML = "Username must be at least 3 characters";
         return false;
     }
     if(value.length > 15 ){
@@ -125,7 +125,9 @@ registerBtn.addEventListener('click', function(e){
 
     if(validateUsername(username) &&  correctPasswordRepaet(repPassword) && validateBirth(dob) && validatePassword(password) && validateEmail(email))
     {
-        window.location.href = "/Cloud-Paint-main/assets/html/logIn.html"
+        const form = document.getElementById('sign-up-form');
+        form.submit();
+        //window.location.href = "/Cloud-Paint-main/assets/html/logIn.html"
 
     }
 })

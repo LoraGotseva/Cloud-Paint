@@ -1,0 +1,20 @@
+{
+  "name": "cloud-paint",
+  "version": "1.0.0",
+  "description": "Made by Lora Gotseva, David Petrov, Alex Slavov and Atanas Keranov",
+  "main": "runServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.3",
+    "sweetalert2": "^11.12.0",
+    "uuid": "^10.0.0"
+  }
+}

@@ -22,7 +22,7 @@ const startDraw = () => {
 }
 
 const drawing = (e) => {
-    if(!isDrawing) {
+    if (!isDrawing) {
         return;
     }
     ctx.lineTo(e.offsetX, e.offsetY); //creating line according to the x and y coordinates of the cursor
@@ -31,7 +31,7 @@ const drawing = (e) => {
 
 colors.forEach(btn => {
     btn.addEventListener("click", () => {
-       selectedColor = window.getComputedStyle(btn).getPropertyValue("color"); //sets the color that we are going to use
+        selectedColor = window.getComputedStyle(btn).getPropertyValue("color"); //sets the color that we are going to use
     })
 })
 
