@@ -2,13 +2,19 @@ const canvas = document.querySelector("canvas"),
 ctx = canvas.getContext("2d"), //allows us to draw on the canvas
 colors = document.querySelectorAll(".color"),
 toolBtns = document.querySelectorAll(".tool"),
-fillColor = document.querySelector("#fill-color");
+fillColor = document.querySelector("#fill-color"),
+clearBtn = document.querySelector('.clear-button');
 
 let prevMouseX, prevMouseY, snapshot, 
 isDrawing = false,
 selectedTool = "brush",
 selectedColor = "#000",
 brushWidth = 5;
+
+const setCanvasBackground = () => {
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+};
 
 window.addEventListener("load", () => {
     canvas.width = canvas.offsetWidth;
@@ -37,6 +43,8 @@ const drawing = (e) => {
 
     if(selectedTool === "brush"){
         drawBrush(e);
+    } else if(selectedTool === "eraser"){
+        erase(e);    
     } else if(selectedTool === "rectangle"){
         drawRect(e);
     } else if(selectedTool === "circle"){
