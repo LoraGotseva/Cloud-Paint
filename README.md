@@ -34,6 +34,13 @@ Email address must be valid
 
 Users need to provide correct pair of registered e-mail and password to access their account.
 
+### Cursor change
+
+When a tool is selected, the cursor changes its appearance according to the selected tool.
+
+It uses a single event listener for all tool buttons. This listener dynamically updates the cursor style based on which tool is selected.
+By removing existing cursor classes and adding the appropriate one (`brush-cursor`, `eraser-cursor`, `text-cursor`, or `default-cursor`), the application ensures clarity and responsiveness.
+
 ### Pick Color
 
 The app allows you to pick a color from a color palette. This functionality is made with JS.
