@@ -1,49 +1,20 @@
-const canvas = document.querySelector("canvas");
-const colors = document.querySelectorAll(".color");
+const canvas = document.querySelector("canvas"),
+ctx = canvas.getContext("2d"), //allows us to draw on the canvas
+colors = document.querySelectorAll(".color"),
+toolBtns = document.querySelectorAll(".tool"),
+fillColor = document.querySelector("#fill-color");
 
-const ctx = canvas.getContext("2d"); //allows us to draw on the canvas
-
-let prevMouseX, prevMouseY, snapshot; 
-let isDrawing = false;
-let brushWidth = 5;
-let selectedColor = "#000";
-let selectedTool = "brush";
+let prevMouseX, prevMouseY, snapshot, 
+isDrawing = false,
+selectedTool = "brush",
+selectedColor = "#000",
+brushWidth = 5;
 
 window.addEventListener("load", () => {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
     setCanvasBackground();
 })
-
-const drawRect = (e) => {
-    if(!fillColor.checked) {
-        return ctx.strokeRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY);
-    }
-    ctx.fillRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY);
-}
-
-const drawCircle = (e) => {
-    ctx.beginPath();
-    let radius = Math.sqrt(Math.pow((prevMouseX - e.offsetX), 2) + Math.pow((prevMouseY - e.offsetY), 2));
-    ctx.arc(prevMouseX, prevMouseY, radius, 0, 2 * Math.PI);
-    fillColor.checked ? ctx.fill() : ctx.stroke();
-}
-
-const drawTriangle = (e) => {
-    ctx.beginPath();
-    ctx.moveTo(prevMouseX, prevMouseY); // start point of first line
-    ctx.lineTo(e.offsetX, e.offsetY); // creating first line of triangle; becomes new starting point
-    ctx.lineTo(prevMouseX * 2 - e.offsetX, e.offsetY); // second line(bottom)
-    ctx.closePath() //third line
-    fillColor.checked ? ctx.fill() : ctx.stroke();
-}
-
-const drawLine = (e) => {
-    ctx.beginPath();
-    ctx.moveTo(prevMouseX, prevMouseY); // start point of line
-    ctx.lineTo(e.offsetX, e.offsetY); // creating line
-    ctx.stroke();
-}
 
 const startDraw = (e) => {
     isDrawing = true;
@@ -65,8 +36,7 @@ const drawing = (e) => {
     ctx.putImageData(snapshot, 0, 0);
 
     if(selectedTool === "brush"){
-        ctx.lineTo(e.offsetX, e.offsetY); //creating line according to the x and y coordinates of the cursor
-        ctx.stroke(); //filling the line with color
+        drawBrush(e);
     } else if(selectedTool === "rectangle"){
         drawRect(e);
     } else if(selectedTool === "circle"){
@@ -84,9 +54,19 @@ colors.forEach(btn => {
         document.querySelector(".options .selected").classList.remove("selected");
         btn.classList.add("selected");
         selectedColor = window.getComputedStyle(btn).getPropertyValue("color"); //sets the color that we are going to use
-        console.log(btn.id);
+        //console.log(btn.id);
     })
 })
+
+toolBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        // removing active class from the previous option and adding on current clicked option
+        document.querySelector(".options .active").classList.remove("active");
+        btn.classList.add("active");
+        selectedTool = btn.id;
+        //console.log(selectedTool);
+    });
+});
 
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mousemove", drawing);
