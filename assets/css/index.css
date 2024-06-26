@@ -135,12 +135,27 @@ li {
     color: rgb(255, 255, 255);
 }
 
+.selected {
+    background-color:  #7D83FF;
+    border-radius: 15px;
+    padding: 2px;
+}
+
+.active {
+    color: #7D83FF;
+}
+
 input[type="range"] {
     width: 90px;
 }
 
 .fill-color-checkbox {
-    font-size: 18px;
+    font-size: 20px;
+    cursor: default;
+}
+
+.fill-color-checkbox:hover {
+    transform: scale(1);
 }
 
 li:hover {
