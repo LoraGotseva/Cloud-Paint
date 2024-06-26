@@ -17,6 +17,8 @@ index = -1;
 const setCanvasBackground = () => {
     ctx.fillStyle = "#fff";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+    restoreArray = [];
+    index = -1;
 };
 
 window.addEventListener("load", () => {
@@ -60,7 +62,10 @@ const drawing = (e) => {
 }
 
 const saveProgress = (e) => {
-    
+    if (e.type != "mouseout") {
+        restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+        index += 1;
+    }
 }
 
 colors.forEach(btn => {
