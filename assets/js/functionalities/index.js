@@ -3,13 +3,16 @@ ctx = canvas.getContext("2d"), //allows us to draw on the canvas
 colors = document.querySelectorAll(".color"),
 toolBtns = document.querySelectorAll(".tool"),
 fillColor = document.querySelector("#fill-color"),
+undoBtn = document.querySelector('.undo-button'),
 clearBtn = document.querySelector('.clear-button');
 
 let prevMouseX, prevMouseY, snapshot, 
 isDrawing = false,
 selectedTool = "brush",
 selectedColor = "#000",
-brushWidth = 5;
+brushWidth = 5,
+restoreArray = [],
+index = -1;
 
 const setCanvasBackground = () => {
     ctx.fillStyle = "#fff";
@@ -56,6 +59,10 @@ const drawing = (e) => {
     }
 }
 
+const saveProgress = (e) => {
+    
+}
+
 colors.forEach(btn => {
     btn.addEventListener("click", () => {
         // removing selected class from the previous option and adding on current clicked option
@@ -78,4 +85,4 @@ toolBtns.forEach(btn => {
 
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mousemove", drawing);
-canvas.addEventListener("mouseup", () => { isDrawing = false; });
+canvas.addEventListener("mouseup", () => { isDrawing = false; saveProgress});
