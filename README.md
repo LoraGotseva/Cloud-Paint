@@ -54,6 +54,10 @@ It updates the visual selection and the selected color whenever a button is clic
 ### Drawing tools
 
 // David
+- Brush - The default selected tool is a brush. It is used for drawing lines on a canvas element based on the mouse cursor's movement. The function draws an invisible line from the current position to the point specified by the cursor's coordinates, then actually (visibly) draws the line on the canvas using the current stroke style.
+
+- Eraser - The users can erase their drawing using the eraser toor. It works the same as the brush, but for the stroke style we use white color.
+
 - Size Slider - Using the size slider, the users can adjust the thickness of the selected tool. The function sets up an event listener for a range input element (slider) that adjusts the brush width. It updates the `brushWidth` variable to the slider's current value whenever the slider is adjusted.
 
 - Text - Users can add text to the drawing canvas using the "A" tool. The function adds a click event listener to the canvas, then checks if the active tool is the text tool.
