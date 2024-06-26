@@ -10,7 +10,7 @@
 </head>
 <body class="flex-box">
     <div class="wrapper flex-box">
-        <form class="sign-up-box flex-box" id="sign-up-form" method="post" action="/register">
+        <form class="sign-up-box flex-box" id="sign-up-form" >
             <div id="sign-up-header" class="flex-box">
                 <img src="../images/palette-removebg-preview.png">
                 <h1>Welcome to CloudPaint!</h1>
@@ -60,7 +60,7 @@
                             Tortor at auctor urna nunc id cursus. Aenean et tortor at risus. Duis tristique sollicitudin nibh sit amet commodo.
                             Sagittis id consectetur purus ut faucibus. Amet aliquam id diam maecenas ultricies mi eget.
                             Massa placerat duis ultricies lacus sed turpis tincidunt id.</p>
-                            <button id="close-terms-btn" class="buttons">Confirm</button>
+                            <button id="close-terms-btn" class="buttons" type="button">Confirm</button>
                         </div>
                     </div>
                     <li><input type="checkbox" class="checkbox">
@@ -73,7 +73,7 @@
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <button id="close-privacy-btn" class="buttons">Confirm</button>
+                            <button id="close-privacy-btn" class="buttons" type="button">Confirm</button>
                         </div>
                     </div>
                 </ul>
@@ -85,7 +85,7 @@
         </form>
     </div>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/sign-up.js"></script>
-    <script src="../js/singUpValidation.js" type="module"></script>
+    <script src="../js/functionalities/sign-up.js"></script>
+    <script src="../js/functionalities/singUpValidation.js" type="module"></script>
 </body>
 </html>
