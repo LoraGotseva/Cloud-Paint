@@ -102,8 +102,6 @@ Key elements:
 
  - Color and Tool Options: Provides selectable options for colors, drawing tools (brush, eraser, shapes), and additional functionalities like uploading and downloading images.
 
-//Alex da si napishe za negovite htmli kakvi sa po interesnite elementi
-
 ### CSS
 
 Firstly, to remove all unnecessary default css values, we have included the `css-reset.css` file. Then, for every page in this project, we have created different css files with many characteristics.
