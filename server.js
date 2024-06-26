@@ -24,12 +24,6 @@ mongoose.connect(dbConfig.url, {
 let auth = require('./assets/js/auth/auth.js')(mongoose)
 let saveImg = require('./assets/js/saveImgToDB.js')(mongoose)
 
-// const userRoute = require('./assets/js/routers/userRouter.js')
-// app.use('/user', userRoute)
-
-// const imgRoute = require('./assets/js/routers/imageRouter.js')
-// app.use('/img', imgRoute)
-
 app.use(express.static(__dirname));
 app.use(express.static(__dirname + '/assets'));
 app.set("views", __dirname + '/assets/html')
@@ -46,7 +40,6 @@ app.get('/register', (request, response) => {
 
 app.post('/register', async (request, response) => {
     await auth.createUser(request.body);
-    console.log("Form submitted");
     response.redirect("/login")
 })
 
@@ -56,7 +49,6 @@ app.get('/login', (request, response) => {
 
 app.post('/login', async (request, response) => {
     let userToken;
-
     try {
         userToken = await auth.loginUser(request.body);
         response.setHeader("Set-Cookie", `token=${userToken}`);
@@ -64,8 +56,6 @@ app.post('/login', async (request, response) => {
     } catch (error) {
         return response.status(401).send(error.message);
     }
-    
-    console.log("Sucessful login");
 })
 
 app.post('/upload', async (request, response) => {
