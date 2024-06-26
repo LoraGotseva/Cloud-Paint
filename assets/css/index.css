@@ -5,6 +5,7 @@ body {
     height: 100vh;
     background-color: #453F78;
     color: #453F78;
+    cursor: url('../images/paintbrush-solid.svg'), auto;
 }
 
 body.brush-cursor {
@@ -17,6 +18,10 @@ body.eraser-cursor {
 
 body.text-cursor {
     cursor:text;
+}
+
+body.default-cursor {
+    cursor: default;
 }
 
 .main-container {

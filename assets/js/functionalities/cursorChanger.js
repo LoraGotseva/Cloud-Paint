@@ -1,5 +1,7 @@
 const elementIds = ["brush", "eraser", "text", "rectangle", "circle", "triangle", "line"];
 
+
+
 elementIds.forEach((id) => {
   document.getElementById(id).addEventListener("click", () => {
     document.body.classList.remove("brush-cursor");
@@ -18,4 +20,20 @@ document.getElementById("eraser").addEventListener("click", () => {
 
 document.getElementById("text").addEventListener("click", () => {
   document.body.classList.add("text-cursor");
+});
+
+document.getElementById("rectangle").addEventListener("click", () => {
+  document.body.classList.add("default-cursor");
+});
+
+document.getElementById("circle").addEventListener("click", () => {
+  document.body.classList.add("default-cursor");
+});
+
+document.getElementById("triangle").addEventListener("click", () => {
+  document.body.classList.add("default-cursor");
+});
+
+document.getElementById("line").addEventListener("click", () => {
+  document.body.classList.add("default-cursor");
 });
