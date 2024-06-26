@@ -58,6 +58,8 @@ It updates the visual selection and the selected color whenever a button is clic
 
 - Eraser - The users can erase their drawing using the eraser toor. It works the same as the brush, but for the stroke style we use white color.
 
+ - Fill bucket
+
 - Size Slider - Using the size slider, the users can adjust the thickness of the selected tool. The function sets up an event listener for a range input element (slider) that adjusts the brush width. It updates the `brushWidth` variable to the slider's current value whenever the slider is adjusted.
 
 - Text - Users can add text to the drawing canvas using the "A" tool. The function adds a click event listener to the canvas, then checks if the active tool is the text tool.
