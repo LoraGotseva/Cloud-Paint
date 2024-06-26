@@ -50,13 +50,11 @@ body.default-cursor {
     position: absolute;
     top: 5px; 
     left: 10px; 
-    z-index: 1;
     width: 40px;
     height: 40px;
     background-color: white;
     font-size: 30px;
     color:#453F78;
-    
 }
 
 .clear-button:hover {
@@ -66,6 +64,22 @@ body.default-cursor {
     color:red;
 }
 
+.undo-button {
+    position: absolute;
+    top: 5px; 
+    right:10px; 
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    font-size: 30px;
+    color:#453F78;
+}
+
+.undo-button:hover {
+    transform: rotate(-15deg);
+    transition: 0.3s;
+    background-color: white;
+}
 
 .toolbar-container {
     flex-direction: column;
@@ -220,7 +234,7 @@ button:hover {
         font-size: 15px;
     }
 
-    .clear-button {
+    .clear-button, .undo-button {
         font-size: 20px;
     }
 
