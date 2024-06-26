@@ -1,7 +1,5 @@
 const elementIds = ["brush", "eraser", "text", "rectangle", "circle", "triangle", "line"];
 
-
-
 elementIds.forEach((id) => {
   document.getElementById(id).addEventListener("click", () => {
     document.body.classList.remove("brush-cursor");
