@@ -31,7 +31,7 @@ function validatePassword(value){
         return false;
     }
     if(value.length < 6){
-        document.querySelector('#password_error').innerHTML = "Password must be atleast 6 characters!";
+        document.querySelector('#password_error').innerHTML = "Password must be at least 6 characters!";
         return false;
     }
 
@@ -66,7 +66,7 @@ function validateBirth(value){
     }
 
     if(age < 14){
-        document.querySelector('#birth_error').innerHTML = "You must be atleast 14 years old!";
+        document.querySelector('#birth_error').innerHTML = "You must be at least 14 years old!";
         return false;
     }
 
