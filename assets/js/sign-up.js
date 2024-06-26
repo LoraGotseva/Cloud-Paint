@@ -64,3 +64,4 @@ window.addEventListener('click', function (e) {
         privacyContainer.style.display = 'none';
     }
 })
+
