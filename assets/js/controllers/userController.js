@@ -9,7 +9,7 @@ exports.create = async (req, res) => {
 	const newId = uuidv4();
 
 	const user = new UserModel({
-		_id: newId,
+		id: newId,
 		username: req.body.username,
 		email: req.body.email,
 		password: req.body.password,
