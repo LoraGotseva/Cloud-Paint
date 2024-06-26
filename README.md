@@ -59,14 +59,14 @@ A function named `clearCanvasBackground()` is called when the bucket is clicked.
 Main used technologies for this project are HTML, CSS, JS and MongoDB.
 
 Node.js packages:
-body-parser (1.20.2)
-crypto-js (4.2.0)
-ejs (3.1.10)
-express (4.19.2)
-mongodb (6.7.0)
-mongoose (8.4.3)
-sweetalert2 (11.12.0)
-uuid (10.0.0)
+- body-parser (1.20.2)
+- crypto-js (4.2.0)
+- ejs (3.1.10)
+- express (4.19.2)
+- mongodb (6.7.0)
+- mongoose (8.4.3)
+- sweetalert2 (11.12.0)
+- uuid (10.0.0)
 
 ### HTML
 
@@ -90,9 +90,11 @@ The pages are responsive, which means the app is compatible with different scree
 
 ### JS
 
-For user authentication there are two exported methods in auth.js: one for registering a new user to save in the database and one for searching a registered user by e-mail and comparing passwords for login.
+The programming language we have used for this project is JavaScript. All of the functionalities are made with it, and you can see their documentation [here](#features).
 
-The script in saveImgToDB.js uploads a new drawing with its author into the database.
+For user authentication there are two exported methods in `auth.js`: one for registering a new user to save in the database and one for searching a registered user by e-mail and comparing passwords for login.
+
+The script in `saveImgToDB.js` uploads a new drawing with its author into the database.
 The server part handles converting the image to string format in the /upload method.
 
 The models provide schemas for the database collections to ensure the records are not mutated easily. They also ensure that each json document is generated with unique id in UUID format.
@@ -106,7 +108,7 @@ Users are saved with unique names, unique e-mails and encrypted passwords.
 Each image is stored with the id of the user that had drawn it and the encrypted to string file itself.
 For now there are not explicitly created clear CRUD operations to work with the database, it uses already generated once provided by the "mongoose" library.
 
-The database.config.js file handles the correct connection to the database.
+The `database.config.js` file handles the correct connection to the database.
 
 ## Credit
 Made by:
