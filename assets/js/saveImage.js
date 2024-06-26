@@ -24,3 +24,25 @@ const saveCanvas = () => {
 };
 
 document.querySelector(".download-button").addEventListener("click", saveCanvas);
+
+document.querySelector(".upload-button").addEventListener("click",  function() {
+    let canvas = document.getElementById("drawing-canvas");
+    // console.log(canvas.toDataURL())
+    fetch('/upload', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: canvas.toDataURL()
+    })
+    .then(async response => {    
+        let json = await response.json();
+        window.location.href = json.url;
+        // if (response.status === 401) {
+        // }
+    })
+    .catch(error => {
+        console.log('error');
+        // window.location.href = '/';
+    })
+});
