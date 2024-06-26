@@ -5,10 +5,9 @@ const setCanvasBackground = () => {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 };
 
-
-const erase = () => {
+const clear = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     setCanvasBackground();
 }
 
-clearBtn.addEventListener("click",erase)
+clearBtn.addEventListener("click", clear);
