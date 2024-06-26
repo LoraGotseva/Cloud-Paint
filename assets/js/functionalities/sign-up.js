@@ -31,9 +31,9 @@ openTermsBtn.addEventListener('click', function () {
     termsContainer.style.display = 'flex';
 
 })
-    openPrivacyBtn.addEventListener('click', function () {
-        privacyContainer.style.display = 'flex';
-    })
+openPrivacyBtn.addEventListener('click', function () {
+    privacyContainer.style.display = 'flex';
+})
 
 closeTermsBtn.addEventListener('click', function () {
     termsContainer.style.display = 'none';
@@ -47,7 +47,6 @@ closeTermsBtn.addEventListener('click', function () {
 })
 
 closePrivacyBtn.addEventListener('click', function () {
-
     privacyContainer.style.display = 'none';
     privacyCheckBox.checked = true;
     if (termsCheckBox.checked == true && privacyCheckBox.checked == true) {

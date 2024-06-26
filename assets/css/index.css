@@ -7,6 +7,18 @@ body {
     color: #453F78;
 }
 
+body.brush-cursor {
+    cursor: url('../images/paintbrush-solid.svg'), auto;
+}
+
+body.eraser-cursor {
+    cursor: url('../images/eraser-solid.svg'), auto;
+}
+
+body.text-cursor {
+    cursor:text;
+}
+
 .main-container {
     justify-content: center;
     align-items: center;
@@ -76,51 +88,61 @@ li {
     cursor: pointer;
 }
 
-.color.option1 {
+.color#red {
     color: rgb(242, 80, 80);
 }
 
-.color.option2 {
+.color#orange {
     color: rgb(255, 184, 42);
 }
-.color.option3 {
+.color#yellow {
     color: rgb(255, 248, 55);
 }
 
-.color.option4 {
+.color#green {
     color: rgb(99, 222, 41);
 }
 
-.color.option5 {
+.color#blue {
     color: rgb(41, 101, 222);
 }
 
-.color.option6 {
+.color#purple {
     color: rgb(144, 41, 222);
 }
 
-.color.option7 {
+.color#black {
     color: rgb(0, 0, 0);
 }
 
-.color.option8 {
+.color#grey1 {
     color: rgb(70, 70, 70);
 }
 
-.color.option9 {
+.color#grey2 {
     color: rgb(107, 107, 107);
 }
 
-.color.option10 {
+.color#grey3 {
     color: rgb(149, 149, 149);
 }
 
-.color.option11 {
+.color#grey4 {
     color: rgb(212, 212, 212);
 }
 
-.color.option12 {
+.color#white {
     color: rgb(255, 255, 255);
+}
+
+.selected {
+    background-color:  #7D83FF;
+    border-radius: 15px;
+    padding: 2px;
+}
+
+.active {
+    color: #7D83FF;
 }
 
 input[type="range"] {
@@ -128,7 +150,12 @@ input[type="range"] {
 }
 
 .fill-color-checkbox {
-    font-size: 18px;
+    font-size: 20px;
+    cursor: default;
+}
+
+.fill-color-checkbox:hover {
+    transform: scale(1);
 }
 
 li:hover {
