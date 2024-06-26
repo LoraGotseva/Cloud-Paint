@@ -7,6 +7,18 @@ body {
     color: #453F78;
 }
 
+body.brush-cursor {
+    cursor: url('../images/paintbrush-solid.svg'), auto;
+}
+
+body.eraser-cursor {
+    cursor: url('../images/eraser-solid.svg'), auto;
+}
+
+body.text-cursor {
+    cursor:text;
+}
+
 .main-container {
     justify-content: center;
     align-items: center;
