@@ -15,12 +15,24 @@ Cloud Paint is a web application that allows users to create profiles and draw v
 ### Create profile
 
 Users are registered with  name, e-mails and encrypted passwords to the database.
-// Aleks da si napisha tam za validaciite rabotite
+
+When creating an account, each user must enter their email address, name on the platform, a password that you will use, as well as confirm the password and agree to the privacy policy and terms of use of the application, as well as date of birth.
+
+Each of these fields has necessary rules that the user must follow in order to successfully register.
+
+Each field must be filled in and valid
+
+name cannot be less than 3 characters or more than 15 characters, it can only consist of 'a-z', 'A-Z', '_', '$', '0-9 '!"
+
+Password must be between 6 and 30 characters
+
+User must be 14 years of age or older
+
+Email address must be valid
 
 ### Login
 
 Users need to provide correct pair of registered e-mail and password to access their account.
-// Aleks da si napisha tam za validaciite rabotite
 
 ### Pick Color
 
@@ -52,7 +64,10 @@ A function named `clearCanvasBackground()` is called when the bucket is clicked.
 
 ### Download
 
-// Alex
+
+Users have the option to download their developed image in 3 different formats - JPEG, PNG, BMP
+
+
 
 ## Technologies
 
