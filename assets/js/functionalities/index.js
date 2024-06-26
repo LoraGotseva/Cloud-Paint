@@ -37,6 +37,8 @@ const drawing = (e) => {
 
     if(selectedTool === "brush"){
         drawBrush(e);
+    } else if(selectedTool === "eraser"){
+        erase(e);    
     } else if(selectedTool === "rectangle"){
         drawRect(e);
     } else if(selectedTool === "circle"){
