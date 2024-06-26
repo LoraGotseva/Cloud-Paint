@@ -29,6 +29,22 @@ const drawCircle = (e) => {
     fillColor.checked ? ctx.fill() : ctx.stroke();
 }
 
+const drawTriangle = (e) => {
+    ctx.beginPath();
+    ctx.moveTo(prevMouseX, prevMouseY); // start point of first line
+    ctx.lineTo(e.offsetX, e.offsetY); // creating first line of triangle; becomes new starting point
+    ctx.lineTo(prevMouseX * 2 - e.offsetX, e.offsetY); // second line(bottom)
+    ctx.closePath() //third line
+    fillColor.checked ? ctx.fill() : ctx.stroke();
+}
+
+const drawLine = (e) => {
+    ctx.beginPath();
+    ctx.moveTo(prevMouseX, prevMouseY); // start point of line
+    ctx.lineTo(e.offsetX, e.offsetY); // creating line
+    ctx.stroke();
+}
+
 const startDraw = (e) => {
     isDrawing = true;
     prevMouseX = e.offsetX;
@@ -55,12 +71,20 @@ const drawing = (e) => {
         drawRect(e);
     } else if(selectedTool === "circle"){
         drawCircle(e);
+    } else if(selectedTool === "triangle"){
+        drawTriangle(e);
+    } else if(selectedTool === "line"){
+        drawLine(e);
     }
 }
 
 colors.forEach(btn => {
     btn.addEventListener("click", () => {
+        // removing selected class from the previous option and adding on current clicked option
+        document.querySelector(".options .selected").classList.remove("selected");
+        btn.classList.add("selected");
         selectedColor = window.getComputedStyle(btn).getPropertyValue("color"); //sets the color that we are going to use
+        console.log(btn.id);
     })
 })
 

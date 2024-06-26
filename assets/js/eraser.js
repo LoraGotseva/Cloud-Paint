@@ -3,12 +3,10 @@ const fillColor = document.querySelector("#fill-color");
 
 toolBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-        if (document.querySelector(".options .active") !== null) {
-            document.querySelector(".options .active").classList.remove("active");
-          }
+        // removing active class from the previous option and adding on current clicked option
+        document.querySelector(".options .active").classList.remove("active");
         btn.classList.add("active");
         selectedTool = btn.id;
         console.log(selectedTool);
     });
 });
-
