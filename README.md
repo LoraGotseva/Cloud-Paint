@@ -12,6 +12,19 @@ Cloud Paint is a web application that allows users to create profiles and draw v
 
 ## Features
 
+### Main drawing functionality
+
+Firstly, for every element we are going to use, we have created variables that store the given element. Then, we have set some default values for certain variables. 
+
+In order to draw anything, we have initialized the canvas. Then there are some event listeners for the mouse state (`mousedown`, `mousemove`, `mouseup`).
+
+On `mousedown`, the function `startDraw()` is being called. This function initializes the drawing process on a canvas. It sets up drawing parameters such as line width and color.
+It captures the initial mouse position and stores a snapshot of the canvas, preparing for subsequent drawing actions.
+
+On `mousemove`, the function `drawing()` is responsible for continuing the drawing process on the canvas. It checks if drawing is currently active (`isDrawing` flag) and restores the canvas state (`snapshot`) to prevent dragging issues. The function dispatches the drawing operation to the appropriate function based on the selected tool (`selectedTool`).
+
+On `mouseup` the `isDrawing` flag is set on false and the drawing process stops.
+
 ### Create profile
 
 Users are registered with  name, e-mails and encrypted passwords to the database.
@@ -22,7 +35,7 @@ Each of these fields has necessary rules that the user must follow in order to s
 
 Each field must be filled in and valid
 
-name cannot be less than 3 characters or more than 15 characters, it can only consist of 'a-z', 'A-Z', '_', '$', '0-9 '!"
+Name cannot be less than 3 characters or more than 15 characters, it can only consist of 'a-z', 'A-Z', '_', '$', '0-9 '!"
 
 Password must be between 6 and 30 characters
 
@@ -53,12 +66,10 @@ It updates the visual selection and the selected color whenever a button is clic
 
 ### Drawing tools
 
-// David
 - Brush - The default selected tool is a brush. It is used for drawing lines on a canvas element based on the mouse cursor's movement. The function draws an invisible line from the current position to the point specified by the cursor's coordinates, then actually (visibly) draws the line on the canvas using the current stroke style.
 
 - Eraser - The users can erase their drawing using the eraser toor. It works the same as the brush, but for the stroke style we use white color.
 
- - Fill bucket
 
 - Size Slider - Using the size slider, the users can adjust the thickness of the selected tool. The function sets up an event listener for a range input element (slider) that adjusts the brush width. It updates the `brushWidth` variable to the slider's current value whenever the slider is adjusted.
 
@@ -67,13 +78,26 @@ It calculates the click position on the canvas and creates a text input. Focuses
 
 ### Figures
 
-// David
+Our users are able to draw different geometric figures. Every shape (except for line) can be either filled or not, which can be chosen by the `Fill shape` checkbox.
+
+ - Rectangle - `drawRect` function draws a rectangle on a canvas at the position of the mouse cursor (`e.offsetX`, `e.offsetY`). It either strokes (`strokeRect`) or fills (`fillRect`) the rectangle based on the state of `fillColor.checked`.
+
+ - Circle - `drawCircle` function draws a circle on a canvas centered at `prevMouseX` and `prevMouseY`, with a radius calculated from the current mouse position (`e.offsetX`, `e.offsetY`). It fills or strokes the circle based on the state of `fillColor.checked`.
+
+ - Triangle - `drawTriangle` function on a canvas creates a triangle, starting from the previous mouse position and extending to the current mouse position. It completes the triangle by connecting back to a calculated point (`prevMouseX * 2 - e.offsetX`, `e.offsetY`).
+It then fills or strokes the triangle based on the state of `fillColor.checked`.
+
+- Line - ``drawLine`` function on a canvas draws a straight line, starting from the previous mouse position and extending to the current mouse position. It then strokes (draws) the line on the canvas using `ctx.stroke()`.
 
 ### Clear canvas
 
 The bucket in the right top corner is used for clearing the canvas.
 
 A function named `clearCanvasBackground()` is called when the bucket is clicked. It fills the entire canvas with white color.
+
+### Undo button
+
+The app allows users to undo their last drawn thing on the canvas. The undo function checks if there are previous canvas states to restore. If so, it decrements an index, removes the last state from `restoreArray` (it contains different states of the canvas), and restores the canvas to the previous state using `putImageData`. 
 
 ### Download
 
