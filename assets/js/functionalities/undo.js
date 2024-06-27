@@ -9,3 +9,5 @@ const undo = () => {
 };
 
 undoBtn.addEventListener("click", undo);
+
+//TODO: make it function for texts as well
