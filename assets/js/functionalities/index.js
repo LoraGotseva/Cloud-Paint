@@ -3,8 +3,8 @@ ctx = canvas.getContext("2d"), //allows us to draw on the canvas
 colors = document.querySelectorAll(".color"),
 toolBtns = document.querySelectorAll(".tool"),
 fillColor = document.querySelector("#fill-color"),
-undoBtn = document.querySelector('.undo-button'),
-clearBtn = document.querySelector('.clear-button');
+undoBtn = document.querySelector(".undo-button"),
+clearBtn = document.querySelector(".clear-button");
 
 let prevMouseX, prevMouseY, snapshot, 
 isDrawing = false,
@@ -61,11 +61,10 @@ const drawing = (e) => {
     }
 }
 
-const saveProgress = (e) => {
-    if (e.type != "mouseout") {
+const saveProgress = () => {
         restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
         index += 1;
-    }
+        //console.log(restoreArray[index]);
 }
 
 colors.forEach(btn => {
@@ -90,4 +89,4 @@ toolBtns.forEach(btn => {
 
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mousemove", drawing);
-canvas.addEventListener("mouseup", () => { isDrawing = false; saveProgress});
+canvas.addEventListener("mouseup", () => {isDrawing = false; saveProgress();});
